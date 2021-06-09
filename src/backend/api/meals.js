@@ -31,13 +31,13 @@ router.get("/", async (request, response) => {
       return
     }
     if ("createdAfter" in request.query) {
-      const createdAfter = request.query.createdAfter
+      const createdAfter = Data.parse(request.query.createdAfter)
       const meals = await knex("meal").where("created_date", ">=", createdAfter)
       response.send(meals)
       return
     }
     if ("limit" in request.query) {
-      const limit = request.query.limit
+      const limit = Number(request.query.limit)
       const meals = await knex("meal").limit(limit)
       response.send(meals)
       return
@@ -51,10 +51,10 @@ router.get("/", async (request, response) => {
 
 router.get("/:id", async (request, response)=>{
   try{
-    const meal = await knex("meal").where("id", request.params.id)
+    const meal = await knex("meal").where("id", Number(request.params.id))
     response.send(meal)
   }catch(error){
-    throw error
+    res.status(500).send('Error')
   }
 })
 
@@ -78,4 +78,4 @@ router.delete("/:id", async(request, response) =>{
   response.send("Meal deleted")
 })
 
-module.exports = router;
+
