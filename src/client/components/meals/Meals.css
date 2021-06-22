@@ -1,0 +1,22 @@
+a{
+    color: white;
+    width: 15em;
+}
+
+a:hover{
+    animation-name: meal-hover-animation;
+    animation-duration: 0.1s;
+    animation-fill-mode: forwards;
+  }
+  
+  @keyframes meal-hover-animation {
+    100% {
+      background-color:#e99797de;  
+      font-weight: 900;
+    }
+}
+
+.meals:hover{
+  background-color: none;
+
+}

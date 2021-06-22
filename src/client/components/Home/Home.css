@@ -1,0 +1,20 @@
+.flex-container{
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    justify-items: stretch;
+    align-items: stretch;
+    gap: 20px
+
+
+}
+
+.meal{
+    padding: 10px;
+    height: 15em;
+    width: 15em;
+    border: 2px solid rgb(233, 151, 151);
+    text-align: justify ;
+    background-color: rgba(0, 0, 0, 0.5);
+
+}
+

@@ -13,7 +13,7 @@ router.get("/", async (request, response) => {
     }
     if ("availableReservations" in request.query && request.query.availableReservations == "true") {
       const meals = await knex.raw(
-        `SELECT meal.title, meal.max_reservations, SUM(reservation.number_of_guests) AS reserved
+        `SELECT meal.id, meal.title, meal.max_reservations, SUM(reservation.number_of_guests) AS reserved
           FROM meal
           LEFT JOIN reservation
           ON meal.id = meal_id
@@ -62,7 +62,7 @@ router.post("/", async (request, response) => {
   try {
     console.log(request.body)
     await knex("meal").insert(request.body)
-    response.send("New meal inserted succesfully")
+    response.send(req.body)
   } catch (error) {
     throw error
   }
@@ -79,3 +79,4 @@ router.delete("/:id", async(request, response) =>{
 })
 
 
+module.exports = router
