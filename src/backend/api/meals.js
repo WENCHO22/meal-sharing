@@ -78,4 +78,4 @@ router.delete("/:id", async(request, response) =>{
   response.send("Meal deleted")
 })
 
-
+module.exports = router;
