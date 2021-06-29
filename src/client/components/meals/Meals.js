@@ -17,6 +17,7 @@ export default function Meals({meals, setMeals}) {
                 ))}
             </div>
             <div className="new-meal-container">
+                <h2>Add a new Meal:</h2>
                 <NewMeal meals={meals} setMeals={setMeals} />
                 
             </div>

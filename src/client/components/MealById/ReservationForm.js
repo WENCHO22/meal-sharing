@@ -37,9 +37,6 @@ export default function ReservationForm({ mealId, availableReservations }) {
 
 
 
-
-    //should only be able to show numbers available for the meal
-
     return (
         <form onSubmit={onSubmit}>
             <label>
