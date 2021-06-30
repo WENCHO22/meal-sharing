@@ -39,8 +39,4 @@ jspm_packages/
 # React build
 build
 
-dist/
-
-.DS_Store
-
-package-lock.json
+.gitignore
