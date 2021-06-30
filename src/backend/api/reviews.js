@@ -14,6 +14,7 @@ router.get("/", async (req, res) => {
 
 router.post("/", async (req, res) => {
     try {
+        console.log(req.body)
         const newReview = await knex("review").insert(req.body)
         res.send("Review added succesfully")
     } catch (error) {

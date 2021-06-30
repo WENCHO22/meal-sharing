@@ -1,19 +1,27 @@
 @import url('https://fonts.googleapis.com/css?family=Montserrat&display=swap');
 @import 'theme.css';
+@import url('https://fonts.googleapis.com/css2?family=Bodoni+Moda&display=swap');
 * {
-  font-family: 'Montserrat', sans-serif;
+  font-family:'Bodoni Moda', sans-serif;
   box-sizing: border-box;
 }
 
-#root {
-  padding-left: 30%;
-  padding-right: 30%;
-  height: 100vh;
+nav a{
+  display: flex;
+  color: white;
+  display: flex;
+  justify-items: space-evenly;
 }
+
 
 body {
   margin: 0;
   font-size: 17px;
+  padding: 2rem;
+  background: url(https://images.squarespace-cdn.com/content/v1/5860128ee4fcb5ea1252336a/1505243859164-LRW8F7NQ0D6460B53LN8/ke17ZwdGBToddI8pDm48kIq4V7YYMrxzAq4yO7o0lsp7gQa3H78H3Y0txjaiv_0fDoOvxcdMmMKkDsyUqMSsMWxHk725yiiHCCLfrh8O1z5QPOohDIaIeljMHgDF5CVlOqpeNLcJ80NK65_fV7S1USmeMPQ2v30XMg1qCRl2PerFza-XGdySDaQ-dH8kka1I6z9MUY0yd2njC85rKH5I0g/vizeat.jpg);
+  background-size: cover;
+  background-attachment: fixed;
+  color: white;
 }
 
 ul {
@@ -24,7 +32,7 @@ ul {
 
 a {
   text-decoration: none;
-  color: #2d3233;
+  color: white;
 }
 
 button {
@@ -39,8 +47,8 @@ button {
 
 @media screen and (max-width: 1400px) {
   #root {
-    padding-left: 30%;
-    padding-right: 30%;
+    padding-left: 0;
+    padding-right: 0;
   }
 }
 
